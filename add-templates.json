@@ -1,0 +1,31 @@
+{
+    "templates": [
+        {
+            "name": "Daily Plan v1",
+            "filename": "noteto-template-daily-plan-v1",
+            "hasVariant": false,
+            "iconCode": "\ue9dc",
+            "categories": [
+                "Life/organize"
+            ]
+        },
+        {
+            "name": "Morning Ritual v1",
+            "filename": "noteto-template-morning-ritual-v1",
+            "hasVariant": false,
+            "iconCode": "\ue9dc",
+            "categories": [
+                "Life/organize"
+            ]
+        },
+        {
+            "name": "Evening Ritual v1",
+            "filename": "noteto-template-evening-ritual-habits-v1",
+            "hasVariant": false,
+            "iconCode": "\ue9dc",
+            "categories": [
+                "Life/organize"
+            ]
+        }
+    ]
+}
