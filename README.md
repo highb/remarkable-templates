@@ -4,7 +4,8 @@ My templates and a little script to help manage them on the Remarkable.
 
 ## Setup
 
-Run `mise install` with [Mise](https://mise.jdx.dev/)
+Run `mise install` with [Mise](https://mise.jdx.dev/). Alternatively, look at
+`.tool-versions` and install the specified tools.`
 
 ## Usage
 
