@@ -22,3 +22,7 @@ template.
 
 Make the template, save the new JSON and PNG, add it to `add-templates.json`, and then
 sync it with `manage.py`.
+
+## Errata
+
+I didn't save the JSON for the daily plan v1. :(
