@@ -57,9 +57,14 @@ def merge(base, additional, output):
             # Add the new template
             base_dict['templates'].append(template)
     
+    # Convert the dictionary back to a list
+    updated_data = {'templates': []}
+    for template in base_dict.values():
+        updated_data['templates'].append(template)
+        
     # Write the merged templates to a new file
     with open(output, 'w') as f:
-        json.dump(base_dict, f, ensure_ascii=True, indent=4)
+        json.dump(updated_data, f, ensure_ascii=True, indent=4)
 
 DEBUG = True
 if __name__ == '__main__':
