@@ -19,11 +19,9 @@ if [[ "${TASK}" = "sync" ]]; then
     scp "${REMARKABLE_USERHOST}":"${TEMPLATES_DIR}"/templates.json workdir/templates.json
     echo "Merging repo templates into workdir/templates.json.tmp"
     # Merge .templates keys from repo into remarkable templates.json from add-templates.json
-    # if a name key already exists in remarkable templates.json, the value is overwritten
-    # if a name key does not exist in remarkable templates.json, it is added
-    # all other keys in remarkable templates.json are preserved, in their original order
-    jq --ascii-output -s '.[0] as $repo | .[1] as $remarkable | $repo | reduce keys[] as $key ({}; .[$key] = $repo[$key] + ($remarkable | .[$key]))' add-templates.json workdir/templates.json > workdir/templates.json.tmp
+    python merge.py workdir/templates.json add-templates.json workdir/templates.json.tmp
     echo "Copying workdir/templates.json.tmp to remarkable"
+    scp *.png "${REMARKABLE_USERHOST}":"${TEMPLATES_DIR}"
     scp workdir/templates.json.tmp "${REMARKABLE_USERHOST}":"${TEMPLATES_DIR}"/templates.json
     echo "Templates synced"
 elif [[ "${TASK}" = "backup" ]]; then
